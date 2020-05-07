@@ -44,32 +44,9 @@ $(function(){
 	});
   
 	
-	//palyer中男主角色切换
-	var rolesmanwiper = new Swiper('.roles_man_wrap', {
-	//autoplay:3000,
-		//loop : true,
-		effect : 'fade',observer: true,
-		observeParents: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		on:{
-			slideChangeTransitionStart:function(){
-				var length = $(".game_roles .swiper_dock_list li").length;
-				$(".game_roles .swiper_dock_list li img").removeClass('on');
-				$(".game_roles .swiper_dock_list li img").eq((this.activeIndex-1)%length).addClass('on');
-			},
-		}
-	});
-	$(".game_roles .swiper_dock_list li").click(function(){
-		var index = $(this).index()+1;
-		rolesmanwiper.slideTo(index, 1000, false);
-		$(".game_roles .swiper_dock_list li img").removeClass('on');
-		$(".game_roles .swiper_dock_list li img").eq(index-1).addClass('on');
-	});
+
 	//palyer中男主音频播放
-	var list = ['music/1.mp3','music/1.mp3','music/1.mp3','music/1.mp3','music/BGM.mp3'];
+	var list = ['music/1.mp3','music/BGM.mp3','music/1.mp3','music/BGM.mp3','music/BGM.mp3'];
 	var num=0;
 	$('.game_roles .role_jineng a').html('<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[num]+'">');
 	$('#man').on('click', "li", function (g) {
@@ -85,31 +62,7 @@ $(function(){
 	  voiceAudio.src = $(this).attr('data-url');
 	  voiceAudio.play();
 	})
-	//palyer中女主角色切换
-	var roleswomanwiper = new Swiper('.roles_woman_wrap', {
-	//autoplay:3000,
-		//loop : true,
-		effect : 'fade',
-		observer: true,
-		observeParents: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		on:{
-			slideChangeTransitionStart:function(){
-				var length = $(".game_roles_woman .swiper_dock_list li").length;
-				$(".game_roles_woman .swiper_dock_list li img").removeClass('on');
-				$(".game_roles_woman .swiper_dock_list li img").eq((this.activeIndex-1)%length).addClass('on');
-			},
-		}
-	});
-	$(".game_roles_woman .swiper_dock_list li").click(function(){
-	var index = $(this).index()+1;
-	roleswomanwiper.slideTo(index);
-		$(".game_roles_woman .swiper_dock_list li img").removeClass('on');
-		$(".game_roles_woman .swiper_dock_list li img").eq(index-1).addClass('on');
-	});
+
 	//palyer中女主音频播放
 	var listwoman= ['music/1.mp3','music/1.mp3','music/1.mp3','music/BGM.mp3','music/1.mp3'];
 	var num1=0;
@@ -168,43 +121,7 @@ $(function(){
 	  $('.video_box .closed').on('click', function () {
 		$('.video_box').removeClass('active')
 	  })
-	//第三屏幕图片向下切换
-	var swiper3 = new Swiper('.page3_container', {
-		autoplay: {
-			delay: 6500,
-			disableOnInteraction: false,
-		},
-		loop:true,
-		autoHeight: true, 
-		direction: 'vertical',
-		navigation: {
-			nextEl: '.page3_container .swiper-button-next',
-		},
-	});
-	//第六屏幕图片向下切换
-	var swiper6 = new Swiper('.page6_container', {
-		autoplay: {
-			delay: 6500,
-			disableOnInteraction: false,
-		  },
-		loop:true,
-		autoHeight: true, 
-		direction: 'vertical',
-		navigation: {
-			nextEl: '.swiper-button-next',
-		},
 	
-	});
-	//第五屏幕切换
-	var swiper = new Swiper('.chara_main', {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		//loop: true,
-		navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-		},
-	});
 	
 	//第四屏幕男女性别切换
 	$('body').on("click", '.man_ico', function () {
@@ -230,7 +147,7 @@ $(function(){
 	 });	
 		
 	
-	var swiper2 = new Swiper('.snews1', {
+	var cardswiper = new Swiper('.snews1', {
 	   pagination: {
 		el: '.swiper-pagination',
 	  },
@@ -343,14 +260,17 @@ $(function(){
 
 
 
-/*
+
  $(window).scroll(function(){
 	// scroll at bottom
 	if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 		$('.fixed_bottom').css('display','none');	
-		$('.fixed_bottom1').css('display','block');
+		$('.fixed_bottom_footer').css('display','block');
+	}else{
+		$('.fixed_bottom').css('display','block');	
+		$('.fixed_bottom_footer').css('display','none');
 	}
-});*/
+});
 /*	$(window).scroll(function(){
 	// scroll at bottom
 	if ($(window).scrollTop() + $(window).height() == $(document).height()) {
