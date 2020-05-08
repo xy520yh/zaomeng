@@ -143,6 +143,9 @@ $(function(){
 		jQuery('html,body').animate({scrollTop:$('#page07').offset().top}, 1000);
 	});
 	
+	
+	
+	
 	/*定义キャラ詳細*/
 	var swiper1 = new Swiper('.card_container', {
        slidesPerView: 1,
