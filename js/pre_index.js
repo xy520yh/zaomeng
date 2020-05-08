@@ -45,64 +45,7 @@ $(function(){
   
 	
 
-	//palyer中男主音频播放
-	var list = ['music/1.mp3','music/BGM.mp3','music/1.mp3','music/BGM.mp3','music/BGM.mp3'];
-	var num=0;
-	$('.game_roles .role_jineng a').html('<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[num]+'">');
-	$('#man').on('click', "li", function (g) {
-		g.preventDefault();
-		var index = $(this).children('a').attr('data-index');
-		console.log(index)
-		var html = '<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[index]+'">';
-		$('.game_roles .role_jineng a').html(html) 
-	});
-	var voiceAudio = new Audio();
-	$('.game_roles .role_jineng').on('click', '#playVoice', function () {
-	  var index = $(this).attr('data-index');
-	  voiceAudio.src = $(this).attr('data-url');
-	  voiceAudio.play();
-	})
-
-	//palyer中女主音频播放
-	var listwoman= ['music/1.mp3','music/1.mp3','music/1.mp3','music/BGM.mp3','music/1.mp3'];
-	var num1=0;
-	$('.game_roles_woman .role_jineng a').html('<img id="playVoice1" src="images/page04_voice.png"  data-url="'+listwoman[num1]+'">');
-	$('#woman').on('click', "li", function (w) {
-		w.preventDefault();
-		var index1 = $(this).children('a').attr('data-index');
-		console.log(index1)
-		var html = '<img id="playVoice1" src="images/page04_voice.png"  data-url="'+listwoman[index1]+'">';
-		$('.game_roles_woman .role_jineng a').html(html) 
-	});
 	
-	$('.game_roles_woman .role_jineng').on('click', '#playVoice1', function () {
-		var index1 = $(this).attr('data-index');
-		voiceAudio.src = $(this).attr('data-url');
-		voiceAudio.play();
-	})
-
-	//chara中女主声音切换
-	var page5One= ['music/1.mp3','music/BGM.mp3','music/1.mp3'];
-	var page5Two= ['music/1.mp3','music/1.mp3','music/1.mp3'];
-	var page5Three= ['music/BGM.mp3','music/1.mp3','music/BGM.mp3']
-	var page5Four= ['music/1.mp3','music/1.mp3','music/1.mp3'];
-	charaVoice('#voice_01',page5One);
-	charaVoice('#voice_02',page5Two);
-	charaVoice('#voice_03',page5Three);
-	charaVoice('#voice_04',page5Four);
-	function charaVoice(id,arr){
-	  for(var i=0; i<page5One.length; i++){
-	  $(id).find('img').eq(i).attr('data-url',arr[i]);
-	  $(id).on('click', 'img', function () {
-		$(this).addClass('active').siblings().removeClass('active');
-	  })
-	}
-		$(id).on('click', 'img', function () {
-		  voiceAudio.src = $(this).attr('data-url');
-		  voiceAudio.play();
-		})
-	
-	}
 	//special视频弹出
 	$('.snews1').on('click', "a", function (g) {
 		g.preventDefault();
@@ -118,7 +61,7 @@ $(function(){
 		  $('.video_box .note').html(html)
 		} 
 	  });
-	  $('.video_box .closed').on('click', function () {
+	  $('.video_box .closed1').on('click', function () {
 		$('.video_box').removeClass('active')
 	  })
 	
@@ -147,7 +90,7 @@ $(function(){
 	 });	
 		
 	
-	var cardswiper = new Swiper('.snews1', {
+/*	var cardswiper = new Swiper('.snews1', {
 	   pagination: {
 		el: '.swiper-pagination',
 	  },
@@ -155,14 +98,24 @@ $(function(){
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	  },
-	});
+	});*/
 
+	var cardswiper = new Swiper('.card_container', {
+		slidesPerView: 1,
+		observer: true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true,//修改swiper的父元素时，自动初始化swiper
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 
 	//点击右上角折叠菜单栏弹出导航
 	$('body').on("click", '.menu_button', function () {
 		$('.nav_box').toggleClass('active')
 	});
-	$('body').on("click", '.nav_box .navs_close', function () {
+	$('body').on("click", '.nav_box .closed', function () {
 		$('.nav_box').removeClass('active')
 	});
 	$('.nav_link div').click(function(){
@@ -212,7 +165,7 @@ $(function(){
 	//三个tab做出切换
 	$('.card_tab ul li').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
-		$(".card_tab_one").eq($(this).index()).show().siblings(".card_tab_one").hide();
+		$(".card_tab_note").eq($(this).index()).show().siblings(".card_tab_note").hide();
 	})
 	$('.nav_link ul li').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
@@ -263,7 +216,7 @@ $(function(){
 
  $(window).scroll(function(){
 	// scroll at bottom
-	if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+	if ($(window).scrollTop() + $(window).height() >= $(document).height()-50) {
 		$('.fixed_bottom').css('display','none');	
 		$('.fixed_bottom_footer').css('display','block');
 	}else{

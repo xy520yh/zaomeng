@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-      <link href="css/swiper.min.css" rel="stylesheet">
+     <link href="css/swiper.min.css" rel="stylesheet">
      <link href="css/pre_main.css" rel="stylesheet" type="text/css">
-     <title>手机端</title>
+     <title>11111888888</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
     <link href="images/icon.png" rel="shortcut icon"/>
@@ -397,7 +397,7 @@
       <div class="video_box">
         <div class="maskbg"></div>
         <div class="content">
-          <div class="closed"><img src="images/closed.png" alt=""></div>
+          <div class="closed1"><img src="images/video_close.png" alt=""></div>
           <div class="note">
             <p>Loading...</p>
           </div>
@@ -445,7 +445,7 @@
           <div class="swiper-pagination"></div>
           </div>
           <div class="pre_close closed">
-            <img src="images/closed.png">
+            <img src="images/close.png">
           </div>
         </div>
       </div>
@@ -513,7 +513,7 @@
                 <a href="#"><img src="images/phone_ytb.png"></a>
                 <a href="#"><img src="images/phone_line.png"></a>
             </div>
-            <div class="navs_close"><img src="images/close.png"></div>
+            <div class="closed"><img src="images/close.png"></div>
         </div>
 	</div>
     <!-- 点击メールで登録弹出对应盒子 -->
@@ -543,11 +543,11 @@
 	var swiper3 = new Swiper('.page3_container', {
 		direction: 'vertical',
 		autoplay: {
-			delay: 6500,
+			delay: 3000,
 		},
 		loop:true,
 		navigation: {
-			nextEl: '.page_03 .swiper-button-next',
+			nextEl: '.page3_container .swiper-button-next',
 		},
 	});
 	
@@ -559,50 +559,98 @@
 		effect : 'fade',observer: true,
 		observeParents: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.game_roles .swiper-button-next',
+			prevEl: '.game_roles .swiper-button-prev',
 		},
 		on:{
 			slideChangeTransitionStart:function(){
 				var length = $(".game_roles .swiper_dock_list li").length;
 				$(".game_roles .swiper_dock_list li img").removeClass('on');
 				$(".game_roles .swiper_dock_list li img").eq((this.activeIndex)%length).addClass('on');
+				var html = '<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[(this.activeIndex)%length]+'">';
+				$('.game_roles .role_jineng a').html(html); 
 			},
 		}
 	});
 	$(".game_roles .swiper_dock_list li").click(function(){
-		var index1 = $(this).index()+1;
+		var index1 = $(this).index();
 		rolesmanwiper.slideTo(index1, 1000, false);
 		$(".game_roles .swiper_dock_list li img").removeClass('on');
-		$(".game_roles .swiper_dock_list li img").eq(index1-1).addClass('on');
+		$(".game_roles .swiper_dock_list li img").eq(index1).addClass('on');
+		var html = '<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[index1]+'">';
+		$('.game_roles .role_jineng a').html(html); 
 	});	
+	//palyer中男主音频播放
+	var list = ['music/1.mp3','music/BGM.mp3','music/1.mp3','music/BGM.mp3','music/BGM.mp3'];
+	var num=0;
+	$('.game_roles .role_jineng a').html('<img id="playVoice" src="images/page04_voice.png"  data-url="'+list[num]+'">');
+	var voiceAudio = new Audio();
+	$('.game_roles .role_jineng').on('click', '#playVoice', function () {
+	  voiceAudio.src = $(this).attr('data-url');
+	  voiceAudio.play();
+	})
 		//palyer中女主角色切换
 	var roleswomanwiper = new Swiper('.roles_woman_wrap', {
 	//autoplay:3000,
-		loop : true,
+		//loop : true,
 		effect : 'fade',
 		observer: true,
 		observeParents: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.game_roles_woman .swiper-button-next',
+			prevEl: '.game_roles_woman .swiper-button-prev',
 		},
 		on:{
 			slideChangeTransitionStart:function(){
 				var length = $(".game_roles_woman .swiper_dock_list li").length;
 				$(".game_roles_woman .swiper_dock_list li img").removeClass('on');
 				$(".game_roles_woman .swiper_dock_list li img").eq((this.activeIndex)%length).addClass('on');
+				var htmla = '<img id="playVoice1" src="images/page04_voice.png"  data-url="'+listwoman[(this.activeIndex)%length]+'">';
+				$('.game_roles_woman .role_jineng a').html(htmla); 
 			},
 		}
 	});
 	$(".game_roles_woman .swiper_dock_list li").click(function(){
-		var index2 = $(this).index()+1;
+		var index2 = $(this).index();
 		roleswomanwiper.slideTo(index2);
 		$(".game_roles_woman .swiper_dock_list li img").removeClass('on');
-		$(".game_roles_woman .swiper_dock_list li img").eq(index2-1).addClass('on');
+		$(".game_roles_woman .swiper_dock_list li img").eq(index2).addClass('on');
+		var htmla = '<img id="playVoice1" src="images/page04_voice.png"  data-url="'+listwoman[index2]+'">';
+		$('.game_roles_woman .role_jineng a').html(htmla) 
 	});
+	//palyer中女主音频播放
+	var listwoman= ['music/1.mp3','music/1.mp3','music/1.mp3','music/BGM.mp3','music/1.mp3'];
+	var num1=0;
+	$('.game_roles_woman .role_jineng a').html('<img id="playVoice1" src="images/page04_voice.png"  data-url="'+listwoman[num1]+'">');
+	$('.game_roles_woman .role_jineng').on('click', '#playVoice1', function () {
+		voiceAudio.src = $(this).attr('data-url');
+		voiceAudio.play();
+	})
 
-		
+	
+
+	//chara中女主声音切换
+	var page5One= ['music/1.mp3','music/BGM.mp3','music/1.mp3'];
+	var page5Two= ['music/1.mp3','music/1.mp3','music/1.mp3'];
+	var page5Three= ['music/BGM.mp3','music/1.mp3','music/BGM.mp3']
+	var page5Four= ['music/1.mp3','music/1.mp3','music/1.mp3'];
+	charaVoice('#voice_01',page5One);
+	charaVoice('#voice_02',page5Two);
+	charaVoice('#voice_03',page5Three);
+	charaVoice('#voice_04',page5Four);
+	function charaVoice(id,arr){
+	  for(var i=0; i<page5One.length; i++){
+	  $(id).find('img').eq(i).attr('data-url',arr[i]);
+	  $(id).on('click', 'img', function () {
+		$(this).addClass('active').siblings().removeClass('active');
+	  })
+	}
+		$(id).on('click', 'img', function () {
+		  voiceAudio.src = $(this).attr('data-url');
+		  voiceAudio.play();
+		})
+	
+	}	
 	
 	
 	//第六屏幕图片向下切换
@@ -610,7 +658,7 @@
 		direction: 'vertical',
 		slidesPerView: 1,
 		navigation: {
-        	nextEl: '.page_06 .swiper-button-next',
+        	nextEl: '.page6_container .swiper-button-next',
       	},
       	loop: true,
 		autoplay: {
