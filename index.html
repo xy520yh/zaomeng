@@ -627,8 +627,6 @@
 		voiceAudio.play();
 	})
 
-	
-
 	//chara中女主声音切换
 	var page5One= ['music/1.mp3','music/BGM.mp3','music/1.mp3'];
 	var page5Two= ['music/1.mp3','music/1.mp3','music/1.mp3'];
@@ -652,7 +650,16 @@
 	
 	}	
 	
-	
+	//第五屏幕切换
+	var charaswiper = new Swiper('.chara_main', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		//loop: true,
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		},
+	});
 	//第六屏幕图片向下切换
 	var swiper6 = new Swiper('.page6_container', {
 		direction: 'vertical',
@@ -665,15 +672,15 @@
 			delay: 3000,
 		},
 	});
-	//第五屏幕切换
-	var charaswiper = new Swiper('.chara_main', {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		//loop: true,
-		navigation: {
+	//第七屏幕切换
+	var cardswiper = new Swiper('.snews1', {
+	   pagination: {
+		el: '.swiper-pagination',
+	  },
+	  navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
-		},
+	  },
 	});
 })
 	</script>

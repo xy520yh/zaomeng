@@ -90,15 +90,7 @@ $(function(){
 	 });	
 		
 	
-/*	var cardswiper = new Swiper('.snews1', {
-	   pagination: {
-		el: '.swiper-pagination',
-	  },
-	  navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	  },
-	});*/
+	
 
 	var cardswiper = new Swiper('.card_container', {
 		slidesPerView: 1,
@@ -216,7 +208,7 @@ $(function(){
 
  $(window).scroll(function(){
 	// scroll at bottom
-	if ($(window).scrollTop() + $(window).height() >= $(document).height()-50) {
+	if ($(window).scrollTop() + $(window).height() >= $(document).height()-110) {
 		$('.fixed_bottom').fadeOut();	
 		$('.fixed_bottom_footer').fadeIn();
 	}else{
