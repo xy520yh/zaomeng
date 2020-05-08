@@ -365,14 +365,14 @@ p.btn a{display:block; width:1.98rem; height:0.7rem; border:0.02rem solid #2568e
 
 /* 最底部页脚*/
 .footer_main{width:7.5rem;margin-top:1.25rem; height:2.04rem;}
-.footer_left{float:left;width:1.19rem;margin-top:0.02rem;width:40%;}
+.footer_left{float:left;margin-top:0.02rem;width:40%;}
 .footer_left img{width:3.01rem; height:2.04rem;}
 .footer_right{float:left;width:58%; margin-left:2%; margin-top:0.4rem;}
-.text_link{line-height: 0.40rem; font-size:0.11rem; display:flex; justify-content:center; align-items:center; width:100%; height:0.4rem;}
+.text_link{line-height: 0.40rem; font-size:0.15rem; display:flex; justify-content:center; align-items:center; width:100%; height:0.4rem;}
 .text_link p{color:#333334; font-weight:bold; margin-right:0.1rem;}
 .text_link p a{color:#333334;}
-.text1 p{font-size:0.12rem; color:#333334;}
-.text1 span.blue{color:rgba(75,125,228); font-weight:bold; margin-right:0.15rem;}
+.text_group p{font-size:0.16rem; color:#333334;}
+.text_group span.blue{color:rgba(75,125,228); font-weight:bold; margin-right:0.15rem;}
 
 /* 最底部页脚*/
 .fixed_bottom_card{height:2rem;bottom:0rem;width:100%;z-index:10;background:rgba(255,255,255,0.7);box-sizing: border-box;}

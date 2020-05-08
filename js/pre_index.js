@@ -217,11 +217,11 @@ $(function(){
  $(window).scroll(function(){
 	// scroll at bottom
 	if ($(window).scrollTop() + $(window).height() >= $(document).height()-50) {
-		$('.fixed_bottom').css('display','none');	
-		$('.fixed_bottom_footer').css('display','block');
+		$('.fixed_bottom').fadeOut();	
+		$('.fixed_bottom_footer').fadeIn();
 	}else{
-		$('.fixed_bottom').css('display','block');	
-		$('.fixed_bottom_footer').css('display','none');
+		$('.fixed_bottom').fadeIn();
+		$('.fixed_bottom_footer').fadeOut();	
 	}
 });
 /*	$(window).scroll(function(){
