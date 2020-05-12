@@ -262,8 +262,8 @@ $(function () {
 	loading();
 	var timer = null;
 	function loading() {
-		$('#video').css('display', 'block');
-		$('#video')[0].play();
+	
+		
 		$('body').css('overflow','hidden');
 		var search = window.location.href;
 		if (search.indexOf('noloading') != -1) {

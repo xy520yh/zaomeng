@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -10,19 +11,34 @@
   <meta name="description" content="" />
   <link href="images/icon.png" rel="shortcut icon" />
   <style type="text/css">
- 
-.demo{width:7.5rem;margin:0 auto;margin-bottom:1rem;height:11rem;}
-#scrollbox{overflow:hidden;width:7.5rem;height:11rem;}
-#scrollpic img,#scrollpic-copy img{width:100%; height: 100%;object-fit: cover;}
+    .demo {
+      width: 7.5rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      height: 11rem;
+    }
 
+    #scrollbox {
+      overflow: hidden;
+      width: 7.5rem;
+      height: 11rem;
+    }
 
-    </style>
+    #scrollpic img,
+    #scrollpic-copy img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
   <div id="loading">
-    <video id='video' muted preload="auto" src="music/media.mp4"></video>
-  </div>  
+    <video id='video' muted webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" autoplay
+      x5-video-orientation="portraint" preload="auto" src="music/media.mp4"></video>
+  </div>
+
   <div class="wraper">
     <!--第一屏幕-->
     <div class="page_01 page" id="page01">
@@ -115,20 +131,20 @@
       </div>
     </div>
     <!--第三屏幕-->
-	<div class="page_03 page" id="page03">
-        <div class="demo">
-          <div id="scrollbox">
-            <div id="scrollcon">
-              <div id="scrollpic">
-                <a href="javascript:void(0)"><img src="images/page3_story_01.png" alt="" /></a>
-                <a href="javascript:void(0"><img src="images/page3_story_02.png" alt="" /></a>
-                <a href="javascript:void(0)"><img src="images/page3_story_03.png" alt="" /></a>
-    
-              </div>
-              <div id="scrollpic-copy"></div>
+    <div class="page_03 page" id="page03">
+      <div class="demo">
+        <div id="scrollbox">
+          <div id="scrollcon">
+            <div id="scrollpic">
+              <a href="javascript:void(0)"><img src="images/page3_story_01.png" alt="" /></a>
+              <a href="javascript:void(0"><img src="images/page3_story_02.png" alt="" /></a>
+              <a href="javascript:void(0)"><img src="images/page3_story_03.png" alt="" /></a>
+
             </div>
+            <div id="scrollpic-copy"></div>
           </div>
         </div>
+      </div>
     </div>
     <!--第四屏幕-->
     <div class="page_04 page" id="page04">
@@ -193,24 +209,19 @@
           <div class="swiper-button-prev"></div>
           <ul class="swiper_dock_list" id="man">
             <li>
-              <a href="javascript:void(0)" data-index='0'><img class="icon on"
-                  src="images/role_icon_hover1.png" /></a>
+              <a href="javascript:void(0)" data-index='0'><img class="icon on" src="images/role_icon_hover1.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='1'><img class="icon"
-                  src="images/role_icon_hover2.png" /></a>
+              <a href="javascript:void(0)" data-index='1'><img class="icon" src="images/role_icon_hover2.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='2'><img class="icon"
-                  src="images/role_icon_hover3.png" /></a>
+              <a href="javascript:void(0)" data-index='2'><img class="icon" src="images/role_icon_hover3.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='3'><img class="icon"
-                  src="images/role_icon_hover4.png" /></a>
+              <a href="javascript:void(0)" data-index='3'><img class="icon" src="images/role_icon_hover4.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='4'><img class="icon"
-                  src="images/role_icon_hover5.png" /></a>
+              <a href="javascript:void(0)" data-index='4'><img class="icon" src="images/role_icon_hover5.png" /></a>
             </li>
 
           </ul>
@@ -269,24 +280,19 @@
           <div class="swiper-button-prev"></div>
           <ul class="swiper_dock_list" id="woman">
             <li>
-              <a href="javascript:void(0)" data-index='0'><img class="icon on"
-                  src="images/role_icon_hover1.png" /></a>
+              <a href="javascript:void(0)" data-index='0'><img class="icon on" src="images/role_icon_hover1.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='1'><img class="icon"
-                  src="images/role_icon_hover2.png" /></a>
+              <a href="javascript:void(0)" data-index='1'><img class="icon" src="images/role_icon_hover2.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='2'><img class="icon"
-                  src="images/role_icon_hover3.png" /></a>
+              <a href="javascript:void(0)" data-index='2'><img class="icon" src="images/role_icon_hover3.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='3'><img class="icon"
-                  src="images/role_icon_hover4.png" /></a>
+              <a href="javascript:void(0)" data-index='3'><img class="icon" src="images/role_icon_hover4.png" /></a>
             </li>
             <li>
-              <a href="javascript:void(0)" data-index='4'><img class="icon"
-                  src="images/role_icon_hover5.png" /></a>
+              <a href="javascript:void(0)" data-index='4'><img class="icon" src="images/role_icon_hover5.png" /></a>
             </li>
 
           </ul>
@@ -519,7 +525,7 @@
         <p><a href="http://efun.com/jp" target="_blank">運営会社</a></p>
       </div>
     </div>
-     <!--菜单-->
+    <!--菜单-->
     <div class="menu_button">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -546,66 +552,66 @@
       </div>
     </div>
   </div>
-    <!--底部内容-->
-   
-    <!-- 点击お問い合わせ弹出对应盒子 -->
-    <div class="kefu_box">
-      <div class="title bb valign-between">
-        <p></p>
-        <div class="closed"><img src="images/close.png" alt=""></div>
-      </div>
-      <div class="note">
-        <p>お問い合わせする内容をご記入の上、<br>下記のメールアドレスまでご連絡ください。</p>
-        <p class="pb">サポート：<a href="mailto:illusion@efunjp.com" target="_blank">illusion@efunjp.com</a></p>
+  <!--底部内容-->
+
+  <!-- 点击お問い合わせ弹出对应盒子 -->
+  <div class="kefu_box">
+    <div class="title bb valign-between">
+      <p></p>
+      <div class="closed"><img src="images/close.png" alt=""></div>
+    </div>
+    <div class="note">
+      <p>お問い合わせする内容をご記入の上、<br>下記のメールアドレスまでご連絡ください。</p>
+      <p class="pb">サポート：<a href="mailto:illusion@efunjp.com" target="_blank">illusion@efunjp.com</a></p>
+    </div>
+  </div>
+  <!-- 点击メールで登録弹出对应盒子 -->
+  <div class="login_box">
+    <div class="title  valign-between">
+      <p></p>
+      <div class="closed"><img src="images/close.png" alt=""></div>
+    </div>
+    <div class="login_content">
+      <div class="l_input"><input type="text" placeholder="メールアドレスを入力してください" class="text"></div>
+      <div class="l_tro">正しいメールアドレスを入力してください</div>
+      <div class="l_btn"><a href="thanks.html">登録</a></div>
+      <div class="l_text">
+        <p>【ご注意】</p>
+        <p>※「@docomo.ne.jp」や「@softbank.ne.jp」など、携帯メールでは着信を拒否される可能性高いため、なるべく「@gamil.com」など、WEBメールでのご登録をお願いします。</p>
+        <p>※ご利用のメールサービスの設定によって、お知らせメールが迷惑メールに割り振られる場合もございます。「@pre-r.efunjp.com」からのメールが受信できるように設定お願いします。</p>
+        <p>※お預かりする個人情報に関しては弊社の「プライバシーポリシー」に沿って、リリースのお知らせのみ使わせていただき、大切に保管させていただきます。</p>
       </div>
     </div>
-    <!-- 点击メールで登録弹出对应盒子 -->
-    <div class="login_box">
-      <div class="title  valign-between">
-        <p></p>
-        <div class="closed"><img src="images/close.png" alt=""></div>
-      </div>
-      <div class="login_content">
-        <div class="l_input"><input type="text" placeholder="メールアドレスを入力してください" class="text"></div>
-        <div class="l_tro">正しいメールアドレスを入力してください</div>
-        <div class="l_btn"><a href="thanks.html">登録</a></div>
-        <div class="l_text">
-          <p>【ご注意】</p>
-          <p>※「@docomo.ne.jp」や「@softbank.ne.jp」など、携帯メールでは着信を拒否される可能性高いため、なるべく「@gamil.com」など、WEBメールでのご登録をお願いします。</p>
-          <p>※ご利用のメールサービスの設定によって、お知らせメールが迷惑メールに割り振られる場合もございます。「@pre-r.efunjp.com」からのメールが受信できるように設定お願いします。</p>
-          <p>※お預かりする個人情報に関しては弊社の「プライバシーポリシー」に沿って、リリースのお知らせのみ使わせていただき、大切に保管させていただきます。</p>
-        </div>
-      </div>
-    </div>
+  </div>
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/pre_index.js"></script>
   <script>
-     $(function () {
-	var search = window.location.href;
-	if (search.indexOf('noloading') != -1) {
-		$('#loading').css({ opacity: 0, pointerEvents: 'none' });
-
-		}
-	})
     $(function () {
-     
+      var search = window.location.href;
+      if (search.indexOf('noloading') != -1) {
+        $('#loading').css({ opacity: 0, pointerEvents: 'none' });
+
+      }
+    })
+    $(function () {
+
       //第三屏幕图片向下切换
       var swiper3 = new Swiper('.page3_container', {
-        speed:2500,//匀速时间
+        speed: 2500,//匀速时间
         autoplay: {
-            delay: 0,
-            stopOnLastSlide: false,
-            disableOnInteraction: true,
+          delay: 0,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
         },
 
-        loop : true,
-         freeMode:true,
-         slidesPerView : 5,
-      
+        loop: true,
+        freeMode: true,
+        slidesPerView: 5,
+
         direction: 'vertical',
-        
+
         navigation: {
           nextEl: '.page3_container .swiper-button-next',
         },
@@ -761,44 +767,44 @@
   </script>
 
 
-<script type="text/javascript">
- //上下无缝滚动
-var speed = 20;
-var direction="top";
-var tab = document.getElementById("scrollbox");
-var tab1 = document.getElementById("scrollpic");
-var tab2 = document.getElementById("scrollpic-copy");
-var leftDir = document.getElementById("leftDir");
-var rightDir = document.getElementById("rightDir");
-tab2.innerHTML = tab1.innerHTML;
-function marquee(){
-    switch(direction){
+  <script type="text/javascript">
+    //上下无缝滚动
+    var speed = 20;
+    var direction = "top";
+    var tab = document.getElementById("scrollbox");
+    var tab1 = document.getElementById("scrollpic");
+    var tab2 = document.getElementById("scrollpic-copy");
+    var leftDir = document.getElementById("leftDir");
+    var rightDir = document.getElementById("rightDir");
+    tab2.innerHTML = tab1.innerHTML;
+    function marquee() {
+      switch (direction) {
         case "top":
-            if(tab2.offsetHeight - tab.scrollTop <= 0){
-                tab.scrollTop -= tab1.offsetHeight;
-            }
-            else{
-                tab.scrollTop++;
-            }
-        break;
+          if (tab2.offsetHeight - tab.scrollTop <= 0) {
+            tab.scrollTop -= tab1.offsetHeight;
+          }
+          else {
+            tab.scrollTop++;
+          }
+          break;
         case "bottom":
-            if(tab.scrollTop <= 0){
-                tab.scrollTop += tab2.offsetHeight;
-            }
-            else{
-                tab.scrollTop--;
-            }
-        break;
+          if (tab.scrollTop <= 0) {
+            tab.scrollTop += tab2.offsetHeight;
+          }
+          else {
+            tab.scrollTop--;
+          }
+          break;
+      }
     }
-}
-function changeDirection(dir){
-   direction = dir;
-}
-var timer = setInterval(marquee,speed);
-tab.onmouseover = function(){clearInterval(timer);};
-tab.onmouseout = function(){timer = setInterval(marquee,speed);};
-leftDir.onclick = function(){changeDirection("top");};
-rightDir.onclick = function(){changeDirection("bottom");};
+    function changeDirection(dir) {
+      direction = dir;
+    }
+    var timer = setInterval(marquee, speed);
+    tab.onmouseover = function () { clearInterval(timer); };
+    tab.onmouseout = function () { timer = setInterval(marquee, speed); };
+    leftDir.onclick = function () { changeDirection("top"); };
+    rightDir.onclick = function () { changeDirection("bottom"); };
   </script>
 </body>
 
