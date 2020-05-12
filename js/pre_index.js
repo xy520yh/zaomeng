@@ -151,7 +151,12 @@ $(function(){
        slidesPerView: 1,
 	     observer:true,//修改swiper自己或子元素时，自动初始化swiper
 		 observeParents:true,//修改swiper的父元素时，自动初始化swiper
-      loop: true,
+	  loop: true,
+	  
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -181,11 +186,13 @@ $(function(){
   //点击メールで登録
   $('body').on("click", '.login_icon', function () {
 	$('.login_icon').addClass('active');
-    $('.login_box').toggleClass('active');
+	$('.login_box').toggleClass('active');
+	$('.swiper-fullscreen').toggleClass("notouch");
   });
   $('body').on("click", '.login_box .closed', function () {
 	  $('.login_icon').removeClass('active');
-    $('.login_box').removeClass('active');
+	$('.login_box').removeClass('active');
+	$('.swiper-fullscreen').toggleClass("notouch");
   });
 
 
@@ -207,8 +214,29 @@ $(function(){
 	});
 
 
+	$('body').on("click", '.tip_btn_01', function () {
+		$('.card_name').addClass('active');
+		$('.tip_box').toggleClass('active');
+	});
+	$('body').on("click", '.card_name .closed', function () {
+		$('.card_name').removeClass('active');
 
+	});
+	//点击ガチャを引く弹出对话框
+	$('body').on("click", '.btn_confirm1', function () {
+		$('.btn_confirm1').addClass('active2');
+		$('.tc_box').toggleClass('active');
+	});
+	$('body').on("click", '.tc_box .closed', function () {
+		$('.btn_confirm1').removeClass('active2');
+		$('.tc_box').removeClass('active');
 
+	});
+
+  //gaha页面点击每个图标
+	$('body').on("click", '.card_icon', function () {
+		$(this).addClass('activea').siblings('.card_icon').removeClass('activea');
+	});
  $(window).scroll(function(){
 	// scroll at bottom
 	if ($(window).scrollTop() + $(window).height() >= $(document).height()-110) {
@@ -229,3 +257,28 @@ $(function(){
 });*/
  
 });
+
+$(function () {
+	loading();
+	var timer = null;
+	function loading() {
+		$('#video').css('display', 'block');
+		$('#video')[0].play();
+		$('body').css('overflow','hidden');
+		var search = window.location.href;
+		if (search.indexOf('noloading') != -1) {
+			$('#loading').css({ opacity: 0, pointerEvents: 'none' });
+			$('.wraper').css('opacity', '1');
+			$('body').css('overflow','auto');
+			clearTimeout(timer);
+		}
+		timer = setTimeout(function () {
+			setTimeout(function () {
+				$('#loading').css('opacity', '0');
+				$('.wraper').css('opacity', '1');
+				$('body').css('overflow','auto');
+			}, 2000)
+		}, 2000)
+	}
+
+})
