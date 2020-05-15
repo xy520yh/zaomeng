@@ -136,10 +136,10 @@ box-shadow:0 0 0.15rem #333;}
  /* .voice img.active{z-index:2;filter: drop-shadow(0px 0px 10px #ff0060); } */
 
 /* 第六屏*/
-.page_06 .swiper-button-next{width: 1.04rem;height: 0.7rem; position:absolute;top: 10.6rem;left:3.5rem;background:url(../images/down_arrow.png) no-repeat center center;background-size: contain;}
-.page_06{ height:11.3rem; }
-.page6_container{ height:11rem;}
-.page_06 .snews1{ height:9rem;} 
+.page6_container .swiper-button-next{width: 1.04rem;height: 0.7rem; position:absolute;top: 5rem;left:3.5rem;background:url(../images/down_arrow.png) no-repeat center center;background-size: contain;}
+.page_06{ height:5.7rem;}
+.page6_container{ height:5.7rem;}
+.page_06 .snews1{ height:5rem;} 
 .page_06 .story_01 img,.page_06 .story_02 img,.page_06 .story_03 img{width:7.5rem; height:4.64rem;}
 /* 第七屏*/
 .page_07 .swiper-wrapper{width:5.65rem; margin-left:1rem;}

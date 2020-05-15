@@ -745,23 +745,19 @@
       })
 
 
-
-      //第六屏幕图片向下切换
+	//第六屏幕图片向下切换
       var swiper6 = new Swiper('.page6_container', {
         direction: 'vertical',
         observer: true,
         observeParents: true,
-        slidesPerView:2,
+        slidesPerView: 1,
         navigation: {
           nextEl: '.page6_container .swiper-button-next',
         },
         loop: true,
-        speed:4600,//匀速时间
-		autoplay: {
-			delay: 0,
-			stopOnLastSlide: false,
-			disableOnInteraction: true,
-		},
+        autoplay: {
+          delay: 3000,
+        },
       });
       //第七屏幕切换
       var cardswiper = new Swiper('.snews1', {
