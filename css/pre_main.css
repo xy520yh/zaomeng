@@ -90,9 +90,9 @@ box-shadow:0 0 0.15rem #333;}
 .page_03 .story_03 img{width:7.5rem; height:5.87rem;}
 .page3_container .swiper-button-next{width: 1.04rem;height: 0.7rem; position:absolute;top: 6.5rem;left:3.5rem;background:url(../images/down_arrow.png) no-repeat center center;background-size: contain;}
 /* 第四屏*/
-.page_04{ background: url(../images/page4_dw.png) no-repeat center top;width:7.5rem;height:11.5rem;background-size:100% auto;margin:0 auto;}
+.page_04{ width:7.5rem;height:11.5rem;margin:0 auto;}
 .mainShow{width:7.5rem; height:11rem;  overflow:hidden; position:relative;}
-.game_roles .swiper-wrapper{position:relative;background-image: url(../images/page4_dw.png);background-size:cover; height:9.61rem; width:7.5rem;}
+.game_roles .swiper-wrapper{position:relative; height:9.61rem; width:7.5rem;}
 .game_roles,.game_roles_woman{width:7.5rem; height:11.5rem;  overflow:hidden; position:relative;}
 .game_roles .swiper-slide-active .role_info{-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: all 0.3s; transition: all 0.3s; opacity:1;}
 .role_info{position:absolute; top:8rem;left:2.5rem; z-index:1000;width:2.62rem; opacity:0; -webkit-transform:translate(-100%, 0); transform:translate(-100%, 0); -webkit-transition:all 0.3s; transition:all 0.3s; z-index:99;}
@@ -100,7 +100,7 @@ box-shadow:0 0 0.15rem #333;}
 .role_jineng{position:absolute; top:8.53rem;left:4.6rem; z-index:1000;width:0.61rem; opacity:0; -webkit-transform:translate(-100%, 0); transform:translate(-100%, 0); -webkit-transition:all 0.3s; transition:all 0.3s; z-index:99;}
 .game_roles .swiper-slide-active .role_jineng,.game_roles_woman .swiper-slide-active .role_jineng{opacity:1; -webkit-transform:translate(0, 0); transform: translate(0, 0); -webkit-transition: all 0.5s; transition: all 0.5s;}
 .role_jineng img{width:0.61rem; height:0.57rem;}
-.role_img1,.role_img2,.role_img3,.role_img4,.role_img5{position:absolute; top:0rem; right:0rem;width:7.5rem; height:9.61rem; opacity:0; -webkit-transform:translate(100%, 0); transform: translate(100%, 0); -webkit-transition:all 0.3s; transition:all 0.3s;}
+.role_img1,.role_img2,.role_img3,.role_img4,.role_img5{position:absolute; top:0rem; right:0rem;width:7.5rem; height:9.61rem; opacity:0; -webkit-transform:translate(100%, 0); transform: translate(100%, 0); -webkit-transition:all 0.3s; transition:all 0.3s; background-image: url(../images/page05_dw.png);background-size:cover;}
 
 .game_roles .swiper-slide-active .role_info,.game_roles_woman .swiper-slide-active .role_info{-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: all 0.3s; transition: all 0.3s; opacity:1;}
 .game_roles .swiper-slide-active .role_img,.game_roles_woman .swiper-slide-active .role_img{opacity:1; -webkit-transform:translate(0, 0); transform: translate(0, 0); -webkit-transition: all 0.3s; transition: all 0.3s;}
@@ -119,27 +119,27 @@ box-shadow:0 0 0.15rem #333;}
 .swiper_dock_list li img{display:none;}
  .swiper_dock_list li .icon.on{display:block;}
 .game_roles_woman .swiper-slide{width:640px; height:608px; position:relative;}
-.sex_ico{z-index:111111111;width:0.93rem; position:absolute; top:3rem; left:0rem;}
- .ssr{z-index:111111111;width:1.26rem; position:absolute; top:0.2rem; left:0rem;}
+.sex_ico{z-index:111111;width:0.93rem; position:absolute; top:3rem; left:0rem;}
+ .ssr{z-index:11111;width:1.26rem; position:absolute; top:0.2rem; left:0rem;}
  .ssr img{width:1.26rem; height:0.88rem;}
 .sex_ico img.active{filter: drop-shadow(0 0 10px #2575ee);}
 .sex_ico img{width:0.93rem; height:0.88rem;}
 .role_jineng a{display:block;width:0.6rem;height:0.6rem;}
 /* 第五屏*/
 
-.page_05  .swiper-slide{position:relative;background-image: url(../images/page05_dw.png);background-size:cover; height:10.90rem; width:7.5rem;}
+.page_05  .swiper-slide{position:relative;height:10.90rem; width:7.5rem;}
 .chara_main{width:100%;height:100%; position:relative;}
-.chara_content{width:7.5rem; position:relative;}
+.chara_content{width:7.5rem; position:relative;background-image: url(../images/page05_dw.png);background-size:cover; height:10.90rem;}
 .chara_content .chara_role  img {width:7.5rem; height:10.9rem;}
 .voice{width:1.4rem;  position:absolute; top:0.4rem; display:flex; flex-direction:column;}
  .voice img{width:1.22rem; height:0.77rem; margin-left:0.2rem;}
  /* .voice img.active{z-index:2;filter: drop-shadow(0px 0px 10px #ff0060); } */
 
 /* 第六屏*/
-.page6_container .swiper-button-next{width: 1.04rem;height: 0.7rem; position:absolute;top: 5rem;left:3.5rem;background:url(../images/down_arrow.png) no-repeat center center;background-size: contain;}
-.page_06{ height:5.7rem;}
-.page6_container{ height:5.7rem;}
-.page_06 .snews1{ height:5rem;} 
+.page_06 .swiper-button-next{width: 1.04rem;height: 0.7rem; position:absolute;top: 10.6rem;left:3.5rem;background:url(../images/down_arrow.png) no-repeat center center;background-size: contain;}
+.page_06{ height:11.3rem; }
+.page6_container{ height:11rem;}
+.page_06 .snews1{ height:9rem;} 
 .page_06 .story_01 img,.page_06 .story_02 img,.page_06 .story_03 img{width:7.5rem; height:4.64rem;}
 /* 第七屏*/
 .page_07 .swiper-wrapper{width:5.65rem; margin-left:1rem;}
@@ -236,9 +236,9 @@ span.account_name{display:block; height:0.45rem; width:2.7rem; line-height:0.45r
 
 /* 底部信息 */
 /* card */
-.wraper{/*background: url(../images/bg2.jpg) no-repeat;background-size: cover; background-position: top center;overflow: hidden;background-attachment: fixed;*/ padding-bottom: 0.58rem;opacity:0;}
-#loading{position: absolute;top:0;bottom: 0; left: 0; right: 0; width:100%; height:100vh;overflow:hidden;}
-#loading video{width:100%; height:100%; object-fit:cover; overflow:hidden;}
+.wraper{/*background: url(../images/bg2.jpg) no-repeat;background-size: cover; background-position: top center;overflow: hidden;background-attachment: fixed;*/ padding-bottom: 0.58rem;}
+/*#loading{position: absolute;top:0;bottom: 0; left: 0; right: 0; width:100%; height:100vh;overflow:hidden;}
+#loading video{width:100%; height:100%; object-fit:cover; overflow:hidden;}*/
 .wraper:before,.wrapera:before {
 content: ' ';
 position: fixed;
@@ -316,13 +316,13 @@ text-shadow:#393939 0.02rem 0 0,#393939 0 0.02rem 0,#393939 -0.02rem 0 0,#393939
 /* thanks*/
 .pre_main{width:5rem; margin:0 auto; position:relative;top:1.6rem;}
 .ths_title{height: 23%; position:absolute; top:-0.7rem;left:1.35rem; z-index:111;}
-.pre_content{width:4.5rem;  background:rgba(255,255,255,0.95); margin:0 auto; padding: 1.5rem 0.25rem 0.3rem;height:7.8rem;  font-size:0.2rem; color:#fff; position:absolute;}
+.pre_content{width:4.5rem;  background:rgba(255,255,255,0.95); margin:0 auto; padding: 1.5rem 0.25rem 0.3rem; font-size:0.2rem; color:#fff; position:absolute;}
 p.cu{font-weight:bold;}
-.pre_content p { text-align:left; line-height:0.32rem; margin-bottom:0.35rem; color:#2a2d30; font-size:0.16rem; display:flex; justify-content: center;}
+.pre_content p {line-height:0.32rem; margin-bottom:0.35rem; color:#2a2d30; font-size:0.16rem; display:flex; justify-content: center;}
 p.tx{color:#696969; margin-bottom:0.2rem; margin-bottom:0.3rem}
 p.strong{color:#2a2d30; font-weight:bold; font-size:0.17rem; text-align:center;margin-bottom:0.3rem;}
 .ths_title img{width:3.25rem; height: 1.90rem;}
-p.btn a{display:block; width:1.98rem; height:0.7rem; border:0.02rem solid #2568ee; line-height:0.7rem; text-align:center; float:left;  background:#fff; color:#1c60ec;margin-right:0.1rem;}
+p.btn a{display:block; width:1.98rem; height:0.7rem; border:0.02rem solid #2568ee; line-height:0.7rem; text-align:center; background:#fff; color:#1c60ec;margin-left:0.05rem;margin-right:0.05rem;}
 .pre_content .btn a:hover{display:block; width:1.98rem; height:0.7rem; color:#000; border:0.02rem solid #000;}
 /* news */
 .news_info_p{position: absolute;top:1.11rem;left:0.4rem;right:0.4rem; bottom:2rem; }

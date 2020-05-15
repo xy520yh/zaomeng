@@ -66,19 +66,7 @@ $(function(){
 	  })
 	
 	
-	//第四屏幕男女性别切换
-	$('body').on("click", '.man_ico', function () {
-		$(this).addClass('active').siblings().removeClass('active');
-		//alert('aaa');
-		$('.game_roles').css('display','block');
-		$('.game_roles_woman').css('display','none');
-	});
-	$('body').on("click", '.woman_ico', function () {
-		$(this).addClass('active').siblings().removeClass('active');
-		//alert('aaa');
-		$('.game_roles').css('display','none');
-		$('.game_roles_woman').css('display','block');
-	});
+
 	//首屏点击预注册按钮弹出预注册页面
 	$('body').on("click", '#login_before', function () {
 		$('.main_nei').css('display','block');
@@ -247,18 +235,11 @@ $(function(){
 		$('.fixed_bottom_footer').fadeOut();	
 	}
 });
-/*	$(window).scroll(function(){
-	// scroll at bottom
-	if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-	  alert('1');
-	  
-	  
-	}
-});*/
+
  
 });
 
-$(function () {
+/*$(function () {
 	loading();
 	var timer = null;
 	function loading() {
@@ -281,4 +262,4 @@ $(function () {
 		}, 2000)
 	}
 
-})
+})*/
